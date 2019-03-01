@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/potatochips-common/potatochips-common.iml" filepath="$PROJECT_DIR$/potatochips-common/potatochips-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-dependence/potatochips-dependence.iml" filepath="$PROJECT_DIR$/potatochips-dependence/potatochips-dependence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-dao/potatochips-manager-dao.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager-dao/potatochips-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-pojo/potatochips-manager-pojo.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager-pojo/potatochips-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-service/potatochips-manager-service.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager-service/potatochips-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-serviceimpl/potatochips-manager-serviceimpl.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager-serviceimpl/potatochips-manager-serviceimpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-web/potatochips-manager-web.iml" filepath="$PROJECT_DIR$/potatochips-manager/potatochips-manager-web/potatochips-manager-web.iml" />
+    </modules>
+  </component>
+</project>

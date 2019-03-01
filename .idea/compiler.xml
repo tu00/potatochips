@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="potatochips-common" />
+        <module name="potatochips-manager-dao" />
+        <module name="potatochips-manager-pojo" />
+        <module name="potatochips-manager-service" />
+        <module name="potatochips-manager-serviceimpl" />
+        <module name="potatochips-manager-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="potatochips-common" target="1.5" />
+      <module name="potatochips-dependence" target="1.5" />
+      <module name="potatochips-manager" target="1.5" />
+      <module name="potatochips-manager-dao" target="1.5" />
+      <module name="potatochips-manager-pojo" target="1.5" />
+      <module name="potatochips-manager-service" target="1.5" />
+      <module name="potatochips-manager-serviceimpl" target="1.5" />
+      <module name="potatochips-manager-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

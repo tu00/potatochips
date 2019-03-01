@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--
+    1.读取db.properties
+    2.配置数据源
+    3.配置会话工厂
+    4.配置dao扫描
+    5.（可选）配置扫描注解类 ssm dao接口（接口不能被实例化）
+    -->
+    <!--<context:component-scan base-package="com.qf.manager.dao"-->
+    <!--读取数据库配置文件-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!--属性注入-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--关闭自动提交事务功能-->
+        <property name="defaultAutoCommit" value="false"/>
+    </bean>
+
+    <!--配置mybatis会话工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--属性注入-->
+        <!--注入数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--注入mybatis的主配置文件-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+        <!--注入映射文件-->
+        <!--<property name="mapperLocations" value=""/>-->
+    </bean>
+
+    <!--配置映射扫描-->
+    <!--id name 若有地方要调用的话，要添加-->
+    <!--MapperScannerConfigurer 这就是DAO接口不需要实现类的原因-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+
+        <!--注入会话工厂 属性sqlSessionFactoryBeanName 要选择value,而不是选择ref-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--基础包 可以扫描到com.qf.manager.dao以及这个包子包下所有接口-->
+        <property name="basePackage" value="com.qf.manager.dao"/>
+    </bean>
+
+</beans>

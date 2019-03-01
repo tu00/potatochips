@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--如何在页面上调用action来展示JSON格式的数据？-->
+    <!--在页面上:http://localhost:8080/manager/products GET  [{},{},{}]-->
+    <!--ProductContrller  @ResponseBody List<Product> listProducts(){ List<Product> lists = service.listProducts(); return lists;}-->
+    <!--第一步，添加jackson的依赖-->
+    <!--第二步，在spring-mvc.xml中添加<mvc:annotation-driven/>-->
+    <!--第三步，在方法上添加@ResponseBody-->
+    <mvc:annotation-driven/>
+    <!--扫描注解类 controller层 @Controller-->
+    <context:component-scan base-package="com.potatochips.controller"/>
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <!--静态资源放行-->
+    <!--mapping url   location 开发工程的路径-->
+    <!--http://localhost:8080/manager/lib/a/b/c/d/e/f/xxx.js-->
+    <mvc:resources mapping="/lib/**" location="/lib/"/>
+    <mvc:resources mapping="/static/**" location="/static/"/>
+
+</beans>

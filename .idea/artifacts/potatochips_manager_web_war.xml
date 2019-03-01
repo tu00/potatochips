@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="potatochips-manager-web:war">
+    <output-path>$PROJECT_DIR$/potatochips-manager/potatochips-manager-web/target</output-path>
+    <root id="archive" name="potatochips-manager-web.war">
+      <element id="artifact" artifact-name="potatochips-manager-web:war exploded" />
+    </root>
+  </artifact>
+</component>

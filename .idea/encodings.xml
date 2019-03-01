@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/potatochips-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-dependence" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-serviceimpl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/potatochips-manager/potatochips-manager-web" charset="UTF-8" />
+  </component>
+</project>
