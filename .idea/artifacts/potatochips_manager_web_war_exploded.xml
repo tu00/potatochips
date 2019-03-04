@@ -19,6 +19,7 @@
           <element id="archive" name="potatochips-manager-pojo-1.0-SNAPSHOT.jar">
             <element id="module-output" name="potatochips-manager-pojo" />
           </element>
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.18" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="archive" name="potatochips-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="potatochips-common" />

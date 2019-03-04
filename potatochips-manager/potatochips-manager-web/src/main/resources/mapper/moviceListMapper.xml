@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.potatochips.dao.movieListDao">
+    <sql id="movice_content">
+         a.id,
+         a.name,
+         a.type,
+         a.nation,
+         a.language,
+         a.filmlength,
+         a.score,
+         a.linktodouban,
+         a.picture
+    </sql>
+
+    <select id="moviceShow" resultType="movieListDto">
+        SELECT
+        <include refid="movice_content"/>
+        FROM
+        movielist as a
+    </select>
+
+
+    <insert id="insert">
+        INSERT INTO movielist(
+            name,
+            type,
+            nation,
+            language,
+            filmlength,
+            score,
+            picture
+            )
+          VALUES(
+            #{name},
+            #{type},
+            #{nation},
+            #{language},
+            #{filmlength},
+            #{score},
+            #{picture}
+
+    </insert>
+
+    <update id="updateById">
+      UPDATE movielist
+      SET
+          name = #{name},
+          type = #{type},
+          nation = #{nation},
+          language = #{language},
+          filmlength = #{filmlength},
+          score = #{score},
+          picture = #{picture}
+       WHERE
+          id = #{id}
+    </update>
+
+    <delete id="deleteById">
+      DELETE FROM
+        movielist
+      where
+        id = #{id};
+    </delete>
+
+</mapper>

@@ -19,6 +19,7 @@
     <orderEntry type="module" module-name="potatochips-manager-service" />
     <orderEntry type="module" module-name="potatochips-manager-dao" />
     <orderEntry type="module" module-name="potatochips-manager-pojo" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.18" level="project" />
     <orderEntry type="module" module-name="potatochips-common" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.8.RELEASE" level="project" />

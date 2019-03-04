@@ -35,6 +35,8 @@
         <!--注入mybatis的主配置文件-->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!--注入映射文件-->
+        <property name="typeAliasesPackage" value="com.potatochips.dto"/>
+        <property name="mapperLocations" value="classpath:/mapper/**/*.xml"/>
         <!--<property name="mapperLocations" value=""/>-->
     </bean>
 
@@ -46,7 +48,8 @@
         <!--注入会话工厂 属性sqlSessionFactoryBeanName 要选择value,而不是选择ref-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--基础包 可以扫描到com.qf.manager.dao以及这个包子包下所有接口-->
-        <property name="basePackage" value="com.qf.manager.dao"/>
+        <property name="basePackage" value="com.potatochips.dao"/>
     </bean>
+
 
 </beans>
